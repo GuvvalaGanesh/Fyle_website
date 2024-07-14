@@ -1,0 +1,370 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+p {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.stat-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0; /* Add some vertical margin */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.stat-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.icon {
+    font-size: 36px; /* Increase icon size */
+    display: block; /* Ensure it starts on a new line */
+    margin-bottom: 10px; /* Add space below icon */
+}
+
+h3 {
+    margin: 10px 0; /* Add some margin around the number */
+}
+
+p {
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Adjust font size */
+}
+
+
+.modal-content {
+    padding: 20px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-header .close {
+    padding: 1rem;
+    margin: -1rem -1rem -1rem auto;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* UI Properties */
+.position {
+    top: 1037px;
+    left: 373px;
+    width: 156px;
+    height: 24px;
+    text-align: left;
+    font: normal normal 600 24px/26px Cormorant SC;
+    letter-spacing: 0px;
+    color: #FF3147;
+    opacity: 1;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    color: #999;
+    transition: 0.2s all;
+    pointer-events: none;
+    margin-left: 0.5rem;
+}
+
+.form-group input {
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    width: 100%;
+    background: none;
+}
+
+.form-group input:focus {
+    border-bottom: 2px solid red;
+    outline: none;
+}
+
+.form-group input:focus + .form-label,
+.form-group input:not(:placeholder-shown) + .form-label {
+    top: -1.5rem;
+    left: 0;
+    font-size: 0.8rem;
+    color: red;
+}
+
+.form-check-label {
+    font-size: 0.9rem;
+    color: #000;
+}
+
+.form-check-input {
+    margin-right: 0.5rem;
+}
+
+.form-check-input:checked {
+    background-color: red;
+    border-color: red;
+}
+
+.btn-danger {
+    background-color: red;
+    border-color: red;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.btn-danger:hover {
+    background-color: red;
+    border-color: red;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-hover .service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.service-hover:hover .service-overlay {
+    opacity: 1;
+}
+
+.service-overlay h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-overlay p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.service-overlay .btn {
+    background-color: #fff;
+    color: #000;
+}
+
+.project-content {
+    cursor: pointer;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.project-content:hover, .project-content.active {
+    background-color: #f8f8f8;
+}
+
+/* Company Growth Section */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.stat {
+    flex: 1;
+    margin: 1rem;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.stat .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: red;
+}
+
+.stat h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.stat p {
+    font-size: 1rem;
+}
+
+.feedback {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.feedback em {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.feedback strong {
+    color: #d9534f;
+    font-size: 1.1em;
+}
+
+.feedback-logos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.feedback-logos img {
+    max-width: 100px;
+    height: auto;
+    margin: 0 10px;
+}
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-hover .service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.service-hover:hover .service-overlay {
+    opacity: 1;
+}
+
+.service-overlay h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-overlay p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.service-overlay .btn {
+    background-color: #fff;
+    color: #000;
+}
+
+.project-content {
+    cursor: pointer;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.project-content:hover, .project-content.active {
+    background-color: #f8f8f8;
+}
+
+.hero-image {
+    position: absolute;
+    top: 100px;
+    left: 1058px;
+    width: 487px;
+    height: 737px;
+}
+
+.red-background {
+    background-color: red;
+    padding: 20px 0; /* Adjust padding as needed */
+}
+
+.feedback-logos {
+    text-align: center; /* Center align the image */
+}
+
+.feedback-logos img {
+    max-width: 100px; /* Adjust max-width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0; /* Remove default margin */
+}
+.performance-image {
+    position: absolute; /* Adjust as necessary based on your layout */
+    top: 2239px;
+    left: 375px;
+    width: 72px;
+    height: 72px;
+    background: transparent url('img/1.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.performance-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+    opacity: 0; /* Hide the image itself to show the background */
+}

@@ -330,7 +330,7 @@ p {
 }
 .project-content:hover{
     color:white;
-    background-color:rgb(216, 72, 72);
+    background-color: red;
 }
 
 .project-content p{

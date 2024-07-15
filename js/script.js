@@ -1,12 +1,9 @@
-<script>
-    function changeProjectImage(imageSrc, element) {
-        document.getElementById('projectImage').src = imageSrc;
-
-        const projectContents = document.querySelectorAll('.project-content');
-        projectContents.forEach(content => {
-            content.classList.remove('active');
-        });
-
-        element.classList.add('active');
-    }
-</script>
+function muskmelon(){
+    document.getElementById('projectImage').src="images/image@2x.png";
+}
+function watermelon(){
+    document.getElementById('projectImage').src="images/watermelon.jpg";
+}
+function carrot(){
+    document.getElementById('projectImage').src="images/carrot.jpg";
+}

@@ -4,12 +4,11 @@ body {
 
 h1 {
     font-size: 2.5rem;
-    font-weight: bold;
+    font-weight:bold;
 }
 
 h5 {
     font-size: 1.2rem;
-    font-weight: bold;
 }
 
 p {
@@ -17,7 +16,19 @@ p {
     margin-bottom: 2rem;
     font-size: 1rem;
 }
-
+.stats{
+    top: 3674px;
+    left: 375px;
+    width: 270px; 
+    height: 233px;
+    height: 233px;
+    box-shadow: 1px 1px 20px #672C2C1F;
+    opacity: 1;
+}
+.stats:hover{
+    box-shadow:0 0 11px rgba(33,33,33,.3);
+    transition: opacity 2s cubic-bezier(.165, .84, .44, 1);
+}
 .stat-box {
     background-color: white;
     padding: 20px;
@@ -77,54 +88,57 @@ p {
     color: #FF3147;
     opacity: 1;
 }
-
-.form-group {
-    position: relative;
-    margin-bottom: 1.5rem;
+.card-body{
+    width:100%;
+    height:100%;
+    top:0;
+    right:-100%;
+    position:absolute;
+    background:rgb(216, 72, 72); 
+    color:white;
+    padding:30px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    transform: none;
+  
 }
-
-.form-group label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 1rem;
-    color: #999;
-    transition: 0.2s all;
-    pointer-events: none;
-    margin-left: 0.5rem;
+.service-card:hover .card-body{
+    right:0;
+    transform: none;
 }
-
-.form-group input {
-    border: none;
-    border-bottom: 2px solid #ddd;
-    padding: 0.5rem 0;
-    font-size: 1rem;
-    width: 100%;
-    background: none;
+.card-title{
+    text-transform:uppercase;
+    font-size:15px;
+    font-weight:400;
 }
-
-.form-group input:focus {
-    border-bottom: 2px solid red;
-    outline: none;
+.card-sub-title{
+    text-transform:capitalize;
+    font-size:12px;
+    font-weight:300;
 }
-
-.form-group input:focus + .form-label,
-.form-group input:not(:placeholder-shown) + .form-label {
-    top: -1.5rem;
-    left: 0;
-    font-size: 0.8rem;
-    color: red;
+.img1{
+    margin-left:80px;
+    margin-bottom:8px;
 }
-
-.form-check-label {
-    font-size: 0.9rem;
-    color: #000;
+.card-btn{
+    color:red;
+    background-color:white;
+    margin-top:30px;
+    border-radius:2px;
+    text-transform:capitalize;
+    border:none;
+    outline:none;
+    cursor: pointer;
+    font-size:11px;
+    margin-left:20px;
+    width: 23vh;
+    height:4vh;
+    
 }
-
-.form-check-input {
-    margin-right: 0.5rem;
+.card-btn:hover{
+    color:white;
 }
-
 .form-check-input:checked {
     background-color: red;
     border-color: red;
@@ -193,19 +207,6 @@ p {
     background-color: #fff;
     color: #000;
 }
-
-.project-content {
-    cursor: pointer;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    margin-bottom: 1rem;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.project-content:hover, .project-content.active {
-    background-color: #f8f8f8;
-}
-
 /* Company Growth Section */
 .section-title {
     font-size: 2rem;
@@ -297,7 +298,10 @@ p {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
-
+.services{
+    display:flex;
+    justify-content:space-between;
+}
 .service-hover:hover .service-overlay {
     opacity: 1;
 }
@@ -318,18 +322,57 @@ p {
     color: #000;
 }
 
-.project-content {
-    cursor: pointer;
-    padding: 1rem;
+.project-content{
     border: 1px solid #ddd;
-    margin-bottom: 1rem;
-    transition: background-color 0.3s ease-in-out;
+    height:25vh;
+    margin-left:10px;
+    background-color:#ddd;
+}
+.project-content:hover{
+    color:white;
+    background-color:rgb(216, 72, 72);
 }
 
-.project-content:hover, .project-content.active {
-    background-color: #f8f8f8;
+.project-content p{
+    margin-left:20px;
+    margin:4px;
+}
+.project-content h5{
+    margin-top:18px;
 }
 
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 22px;
+    height: 15px;
+    border: 2px solid rgb(216, 72, 72);
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    margin-top:4px;
+}
+
+input[type="checkbox"]:checked {
+    background-color:rgb(216, 72, 72);
+}
+
+input[type="checkbox"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.form-check{
+    display:flex;
+    justify-content:space-between;
+}
 .hero-image {
     position: absolute;
     top: 100px;
@@ -368,3 +411,21 @@ p {
     object-fit: cover; /* Ensures the image covers the container */
     opacity: 0; /* Hide the image itself to show the background */
 }
+.container .carousel-indicators  li{
+      border-radius:50%;
+      height:7px;
+      width:7px;
+      background-color:white; 
+      margin:8px;
+     
+  }
+  .container .carousel-indicators  li:hover{
+    border-radius:50%;
+    height:7px;
+    width:7px;
+    background-color:red; 
+    margin:8px;   
+}
+
+
+ 
